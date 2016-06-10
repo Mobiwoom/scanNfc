@@ -1,0 +1,2 @@
+# scanNfc-PhoneGap
+Phonegap Plugin
