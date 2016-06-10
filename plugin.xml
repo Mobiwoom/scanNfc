@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="cordova-plugin-echo"
+    version="1.0.0">
+
+    <name>Echo</name>
+    <description>Cordova Echo Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,echo</keywords>
+
+    <js-module src="www/echo.js" name="echo">
+        <clobbers target="window.echo" />
+    </js-module>
+
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+    <feature name="Echo">
+              <param name="android-package" value="com.delcasda.myplugin.Echo" />
+              <param name="onload" value="true" />
+    </feature>
+        </config-file>
+
+        <source-file src="src/android/Echo.java" target-dir="src/com/delcasda/myplugin" />
+        <source-file src="src/android/SimpleAsyncTask.java" target-dir="src/com/delcasda/myplugin" />
+        <source-file src="src/android/Provider.java" target-dir="src/com/delcasda/myplugin" />
+        <source-file src="src/android/libs/slf4j-api-1.7.21.jar" target-dir="libs/" />   
+        <source-file src="src/android/libs/slf4j-simple-1.7.21.jar" target-dir="libs/" />   
+        <source-file src="src/android/libs/bit-lib4j-1.4.12.jar" target-dir="libs/" />   
+        <source-file src="src/android/libs/commons-collections4-4.0.jar" target-dir="libs/" />   
+        <source-file src="src/android/libs/commons-io-2.5.jar" target-dir="libs/" />   
+        <source-file src="src/android/libs/commons-lang3-3.4.jar" target-dir="libs/" />   
+        <source-file src="src/android/libs/emv-paycard-library-2.1.1.jar" target-dir="libs/" />   
+
+    </platform> 
+
+</plugin>
